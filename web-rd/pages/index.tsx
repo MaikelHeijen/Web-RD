@@ -5,6 +5,11 @@ import picture1 from "../public/Cropped_Main2.jpg";
 import Footer1 from "@/components/footer";
 import PicText from "@/components/PicText";
 
+import { Montserrat, Inter } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["700"] }); // Voor de naam
+const inter = Inter({ subsets: ["latin"], weight: ["400"] }); // Voor de tekst
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,15 +37,15 @@ export default function Home() {
           className="object-cover"
         />
 
-        {/* Naam linksboven */}
-        <div className="absolute top-6 left-12 text-white font-bold text-4xl ml-25">
-          <h1>Romain Dohmen</h1>
+        {/* Naam met volledige breedte achtergrond */}
+        <div className={`${montserrat.className} absolute text-white font-bold text-4xl py-3 px-6`}>
+          <h1 className="max-w-screen-xl ml-30">Romain Dohmen</h1>
         </div>
 
         {/* Overlay met content op de originele plaats */}
         <div className="absolute inset-0 flex flex-col items-start justify-center text-white p-6 ml-30">
           <div className="bg-white/20 backdrop-blur-md p-6 rounded-lg max-w-4xl">
-            <h1 className="text-5xl font-bold border-b-4 border-[#71c4ef] inline-block pb-2">
+            <h1 className={`${inter.className} text-5xl font-extrabold border-b-4 border-[#71c4ef] inline-block pb-2`}>
               Advies voor Groei en Innovatie
             </h1>
             <p className="mt-4 text-2xl text-white">
