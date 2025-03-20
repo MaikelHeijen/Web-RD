@@ -34,7 +34,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="absolute w-full h-full object-cover"
         />
 
         {/* Naam met volledige breedte achtergrond */}
@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Overlay met content op de originele plaats */}
         <div className="absolute inset-0 flex flex-col items-start justify-center text-white p-6 ml-30">
-          <div className="bg-white/20 backdrop-blur-md p-6 rounded-lg max-w-4xl">
+          <div className="bg-white/20 backdrop-blur-md p-6 rounded-lg max-w-3xl">
             <h1 className={`${inter.className} text-5xl font-extrabold border-b-4 border-[#71c4ef] inline-block pb-2`}>
               Advies voor Groei en Innovatie
             </h1>
