@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Overlay met content op de originele plaats */}
-        <div className="absolute inset-0 flex flex-col items-start justify-center text-white p-6 ml-30">
+        <div className="absolute inset-0 flex flex-col items-center sm:items-start justify-center text-white p-6 sm:ml-30">
           <div className="bg-white/20 backdrop-blur-md p-6 rounded-lg max-w-3xl">
             <h1 className={`${inter.className} text-5xl font-extrabold border-b-4 border-[#71c4ef] inline-block pb-2`}>
               Advies voor Groei en Innovatie
@@ -52,16 +52,18 @@ export default function Home() {
               Wij helpen bedrijven groeien met strategisch advies, efficiënte processen en innovatieve oplossingen. 
               Ontdek hoe wij jouw organisatie naar het volgende niveau kunnen tillen.
             </p>
-            <button className="mt-6 px-8 py-3 bg-white text-black rounded-md font-medium transition-all hover:text-white hover:bg-[#71c4ef] cursor-pointer">
-              Neem contact op
-            </button>
+            <a href="https://www.linkedin.com/in/romaindohmen/" target="_blank" rel="noopener noreferrer">
+              <button className="mt-6 px-8 py-3 bg-white text-black rounded-md font-medium transition-all hover:text-white hover:bg-[#71c4ef] cursor-pointer">
+                Neem contact op
+              </button>
+            </a>
           </div>
         </div>
       </div>
       
       <PicText />
       <Footer1 />
-
+      
     </main>
   );
 }
