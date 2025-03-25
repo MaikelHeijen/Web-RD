@@ -45,12 +45,13 @@ const PictureText: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center">
-            {/* Max-width wrapper to prevent too much whitespace on ultra-wide screens */}
             <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-20 xl:px-24 flex flex-col gap-20 mt-30 mb-30">
                 {content.map((item, index) => (
                     <div
                         key={index}
-                        ref={(el) => (sectionRefs.current[index] = el!)}
+                        ref={(el) => {
+                            sectionRefs.current[index] = el!;
+                        }}
                         className={`flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 mt-12 ${
                             item.reverse ? "md:flex-row-reverse" : ""
                         }`}
